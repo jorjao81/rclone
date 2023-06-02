@@ -1511,6 +1511,15 @@ if you are reading and writing to an OS X filing system this will be
 
 This command line flag allows you to override that computed default.
 
+### --multi-thread-write-buffer-size=SIZE ###
+
+When downloading with multiple threads, rclone will buffer SIZE
+bytes in memory before writing to disk.
+
+This can improve performance if the underlying filesystem does not
+deal well with a lot of small writes in different positions of the
+file.
+
 ### --multi-thread-cutoff=SIZE ###
 
 When downloading files to the local backend above this size, rclone
